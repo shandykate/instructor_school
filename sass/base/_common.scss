@@ -1,0 +1,92 @@
+/* ЗАГАЛЬНІ СТИЛІ */
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  line-height: 22px;
+  font-weight: 400;
+  color: $primary-text-color;
+  background: $background-color;
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section {
+    width: 100%;
+    min-width: 320px;
+    padding: 20px 0;
+    @media screen and (min-width: 768px) {
+        padding: 40px 0;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 60px 0;
+    }
+    .section-title {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 18px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 40px;
+            font-size: 22px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 60px;
+            font-size: 26px;
+        }
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+    }
+}
+
+.coloured {
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    padding: 0 20px;
+    @media screen and (min-width: 768px) {
+        padding: 0 40px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 0 60px;
+    }
+}
+
+.simple-text {
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: $main-color;
+  @media screen and (min-width: 768px) {
+    padding: 10px 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 20px 60px;
+  }
+  .header-logo {
+    width: 100px;
+    height: 100px;
+    background-image: url(./../img/main-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .header-nav {
+    .header-menu {
+      display: flex;
+      color: $background-color;
+      .item:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
