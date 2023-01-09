@@ -1,10 +1,17 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 20px;
   background-color: $main-color;
+  border-bottom: 1px solid black;
   @media screen and (min-width: 768px) {
     padding: 0 40px;
   }
@@ -29,11 +36,6 @@
       display: flex;
       color: $background-color;
       .item {
-        transition: transform $animation-timing 2s;
-        &:hover {
-          transform: rotateX(360deg);
-        }
-
         .header-menu-link {
           display: inline-flex;
           align-items: center;
@@ -41,8 +43,10 @@
           height: 100px;
           text-transform: uppercase;
           color: $background-color;
-          transition: background $animation-timing 250ms, color $animation-timing 250ms;
+          transition: background $animation-timing 250ms, color $animation-timing 250ms,
+            transform $animation-timing 3s;
           &:hover {
+            transform: rotateX(360deg);
             color: red;
             background: $background-color;
           }
