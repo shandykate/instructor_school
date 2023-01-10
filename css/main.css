@@ -355,16 +355,17 @@ h6 {
 }
 
 .coloured {
-  background-color: white;
+  background-color: #3e3e3e;
+  color: #cccfcc;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   width: 100%;
   padding: 0 20px;
-  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -388,15 +389,16 @@ h6 {
   width: 180px;
   margin: 0 auto;
   padding: 8px 15px;
-  background: red;
-  border: 1px solid black;
-  color: black;
+  background: #c00000;
+  border: 1px solid #cccfcc;
+  color: #cccfcc;
   font-weight: 700;
-  transition: background cubic-bezier(0.4, 0, 0.2, 1) 250ms, box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .btn-primary:hover, .btn-primary:focus {
   background: #8d0101;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  color: #3e3e3e;
 }
 
 .tel-link {
@@ -431,7 +433,7 @@ h6 {
 .social-list .social-item:hover, .social-list .social-item:focus {
   background: #8d0101;
   color: #3e3e3e;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .header {
@@ -502,22 +504,31 @@ h6 {
 }
 
 .about-list {
-  display: flex;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .about-list {
+    display: flex;
+  }
 }
 .about-list .about-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 100%;
   padding: 20px;
   border-top: 1px solid #3e3e3e;
-  border-bottom: 1px solid #3e3e3e;
+  border-right: 1px solid #3e3e3e;
   border-left: 1px solid #3e3e3e;
 }
 @media screen and (min-width: 768px) {
   .about-list .about-item {
+    width: 50%;
     padding: 40px;
+    border-top: 1px solid #3e3e3e;
+    border-bottom: 1px solid #3e3e3e;
+    border-left: 1px solid #3e3e3e;
+    border-right: 0;
   }
 }
 .about-list .about-item .item-name {
@@ -537,7 +548,12 @@ h6 {
   }
 }
 .about-list .about-item:last-child {
-  border-right: 1px solid #3e3e3e;
+  border-bottom: 1px solid #3e3e3e;
+}
+@media screen and (min-width: 768px) {
+  .about-list .about-item:last-child {
+    border-right: 1px solid #3e3e3e;
+  }
 }
 
 .princips .princips-name {
@@ -560,27 +576,56 @@ h6 {
   margin-bottom: 20px;
 }
 
-.classes .classes-list {
+.classes-list {
   width: 100%;
-  display: flex;
-}
-.classes .classes-list .classes-item {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .classes-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+.classes-list .classes-item {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 20px;
-  border: 1px solid #3e3e3e;
+  border: 1px solid #cccfcc;
 }
-.classes .classes-list .classes-item .classes-name {
+@media screen and (min-width: 1200px) {
+  .classes-list .classes-item {
+    flex-basis: calc((100% - 120px) / 3);
+    padding: 40px;
+  }
+}
+.classes-list .classes-item .classes-name {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.classes .classes-list .classes-item .course-list {
+@media screen and (min-width: 1200px) {
+  .classes-list .classes-item .classes-name {
+    margin-bottom: 40px;
+  }
+}
+.classes-list .classes-item .course-list {
   margin-bottom: 20px;
 }
-.classes .classes-list .classes-item:not(:last-child) {
-  margin-right: 20px;
+@media screen and (min-width: 1200px) {
+  .classes-list .classes-item .course-list {
+    margin-bottom: 40px;
+  }
+}
+.classes-list .classes-item .course-list .course-link {
+  color: #cccfcc;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.classes-list .classes-item .course-list .course-link:hover, .classes-list .classes-item .course-list .course-link:focus {
+  color: #8d0101;
 }
 
 .partner-list {
@@ -592,14 +637,16 @@ h6 {
 .partner-list .partner-item {
   display: block;
   height: 150px;
-  border: 1px solid white;
+  border: 1px solid #3e3e3e;
   flex-basis: calc((100% - 40px) / 3);
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.partner-list .partner-item:hover, .partner-list .partner-item:focus {
+  border: 1px solid #8d0101;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .support {
-  display: block;
-  width: 100%;
-  height: 200px;
   background-image: url(./../img/support.jpeg);
   background-size: cover;
   background-repeat: no-repeat;

@@ -6,8 +6,13 @@
   .partner-item {
     display: block;
     height: 150px;
-    border: 1px solid white;
+    border: 1px solid $primary-text-color;
     flex-basis: calc((100% - 40px) / 3);
+    transition: all $animation-timing 250ms;
+    &:hover, &:focus {
+      border:1px solid $accent-color;
+      box-shadow: $box-shadow;
+    }
   }
 }
 

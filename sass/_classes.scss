@@ -1,25 +1,43 @@
-.classes {
-    .classes-list {
-        width: 100%;
-        display: flex;
-        .classes-item {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            text-align: center;
-            padding: 20px;
-            border: 1px solid $primary-text-color;
-            .classes-name {
-                text-transform: uppercase;
-                margin-bottom: 20px;
-            }
-            .course-list {
-                margin-bottom: 20px;
-            }
-        }
-        .classes-item:not(:last-child) {
-            margin-right: 20px;
-        }
+.classes-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .classes-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid $background-color;
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 120px) / 3);
+        padding: 40px;
     }
-    
+    .classes-name {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 40px;
+      }
+    }
+    .course-list {
+      margin-bottom: 20px;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 40px;
+      }
+      .course-link {
+        color: $background-color;
+        transition: all $animation-timing 250ms;
+        &:hover, &:focus {
+          color: $accent-color;
+        }
+      }
+    }
+  }
 }
