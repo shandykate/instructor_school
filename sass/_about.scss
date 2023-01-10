@@ -1,14 +1,16 @@
 .about-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 60px;
   .about-item {
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
     padding: 20px;
-    background-color: $primary-text-color;
-    color: white;
+    border-top: 1px solid $primary-text-color;
+    border-bottom: 1px solid $primary-text-color;
+    border-left: 1px solid $primary-text-color;
+    // border-right: 1px solid $primary-text-color;
     @media screen and (min-width: 768px) {
       padding: 40px;
     }
@@ -24,62 +26,25 @@
         margin-bottom: 60px;
       }
     }
-    .leaders-list {
-      display: flex;
-      .leaders-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        .leaders-name {
-          margin-bottom: 20px;
-        }
-        .leaders-img {
-          display: block;
-          width: 100%;
-          margin-bottom: 20px;
-        }
-      }
-      .leaders-item:not(:last-child) {
-        margin-bottom: 20px;
-        @media screen and (min-width: 768px) {
-          margin-bottom: 0;
-          margin-right: 40px;
-        }
-        @media screen and (min-width: 1200px) {
-          margin-right: 60px;
-        }
-      }
-    }
-    .princip-list {
-        display: flex;
-        align-items: center;
-        .princip-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid white;
-            padding: 20px;
-            .item-svg {
-                fill: white;
-                width: 80px;
-                height: 80px;
-                margin-bottom: 20px;
-                @media screen and (min-width: 768px) {
-                    margin-bottom: 40px;
-                  }
-            }
-        }
-        .princip-item:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
   }
-
-  .about-item:not(:last-child) {
-    margin-bottom: 20px;
-    @media screen and (min-width: 768px) {
-      margin-bottom: 40px;
-    }
+  .about-item:last-child{
+    border-right: 1px solid $primary-text-color;
   }
 }
+    .princips {
+      .princips-name {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 60px;
+      }
+      }
+        .princip-item:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }

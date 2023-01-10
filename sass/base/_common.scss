@@ -76,8 +76,12 @@ h6 {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: 0 20px;
+  text-align: center;
   @media screen and (min-width: 768px) {
     padding: 0 40px;
   }
@@ -106,5 +110,41 @@ h6 {
   &:focus {
     background: $accent-color;
     box-shadow: $box-shadow;
+  }
+}
+
+.tel-link {
+  display: inline-flex;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #cccfcc;
+  transition: color $animation-timing 250ms;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.social-list {
+  margin-bottom: 20px;
+  .social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: red;
+    color: $background-color;
+    transition: all $animation-timing 250ms;
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      fill: currentColor
+    }
+    &:hover, &:focus {
+      background: $accent-color;
+      color: $primary-text-color;
+      box-shadow: $box-shadow;
+    }
   }
 }
