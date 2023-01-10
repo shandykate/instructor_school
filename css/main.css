@@ -460,13 +460,7 @@ h6 {
     padding: 0 60px;
   }
 }
-.header .header-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-right: 20px;
-}
-.header .header-thumb .header-logo {
+.header .header-logo {
   width: 80px;
   height: 80px;
   background-image: url(./../img/main-logo.png);
@@ -476,21 +470,16 @@ h6 {
   margin: 10px 20px 10px 0;
   transition: transform 1s ease-in-out;
 }
-.header .header-thumb .header-logo:hover {
+.header .header-logo:hover {
   transform: rotateX(360deg);
 }
-.header .header-thumb .header-name {
+.header .header-logo .header-name {
   display: none;
   font-family: "Philosopher", sans-serif;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
   color: #c00000;
-}
-@media screen and (max-width: 767px) {
-  .header .header-thumb .header-name {
-    display: none;
-  }
 }
 .header .header-nav .header-menu {
   display: flex;
