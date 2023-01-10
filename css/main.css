@@ -460,18 +460,37 @@ h6 {
     padding: 0 60px;
   }
 }
-.header .header-logo {
+.header .header-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 20px;
+}
+.header .header-thumb .header-logo {
   width: 80px;
   height: 80px;
   background-image: url(./../img/main-logo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 10px 40px 10px 0;
+  margin: 10px 20px 10px 0;
   transition: transform 1s ease-in-out;
 }
-.header .header-logo:hover {
+.header .header-thumb .header-logo:hover {
   transform: rotateX(360deg);
+}
+.header .header-thumb .header-name {
+  display: none;
+  font-family: "Philosopher", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c00000;
+}
+@media screen and (max-width: 767px) {
+  .header .header-thumb .header-name {
+    display: none;
+  }
 }
 .header .header-nav .header-menu {
   display: flex;
@@ -634,6 +653,11 @@ h6 {
   gap: 20px;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .partner-list {
+    gap: 40px;
+  }
+}
 .partner-list .partner-item {
   display: block;
   height: 150px;
@@ -644,6 +668,11 @@ h6 {
 .partner-list .partner-item:hover, .partner-list .partner-item:focus {
   border: 1px solid #8d0101;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 768px) {
+  .partner-list .partner-item {
+    flex-basis: calc((100% - 80px) / 3);
+  }
 }
 
 .support {

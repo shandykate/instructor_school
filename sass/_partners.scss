@@ -3,6 +3,9 @@
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    gap: 40px;
+  }
   .partner-item {
     display: block;
     height: 150px;
@@ -12,6 +15,9 @@
     &:hover, &:focus {
       border:1px solid $accent-color;
       box-shadow: $box-shadow;
+    }
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 80px) / 3);
     }
   }
 }

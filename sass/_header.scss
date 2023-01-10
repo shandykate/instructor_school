@@ -17,17 +17,34 @@
   @media screen and (min-width: 1200px) {
     padding: 0 60px;
   }
-  .header-logo {
-    width: 80px;
-    height: 80px;
-    background-image: url(./../img/main-logo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 10px 40px 10px 0;
-    transition: transform 1s ease-in-out;
-    &:hover {
-      transform: rotateX(360deg);
+  .header-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 20px;
+    .header-logo {
+      width: 80px;
+      height: 80px;
+      background-image: url(./../img/main-logo.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 10px 20px 10px 0;
+      transition: transform 1s ease-in-out;
+      &:hover {
+        transform: rotateX(360deg);
+      }
+    }
+    .header-name {
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+      font-family: 'Philosopher', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $heading-color;
     }
   }
   .header-nav {
