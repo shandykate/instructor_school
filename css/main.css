@@ -269,7 +269,7 @@ html,
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-size: 14px;
   letter-spacing: 0.04em;
   line-height: 22px;
@@ -277,11 +277,18 @@ body {
   color: #3e3e3e;
   background: #cccfcc;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   html,
 body {
     font-size: 16px;
     line-height: 28px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html,
+body {
+    font-size: 18px;
+    line-height: 32px;
   }
 }
 
@@ -333,7 +340,7 @@ h6 {
   font-size: 18px;
   text-align: center;
   text-transform: uppercase;
-  color: black;
+  color: #c00000;
 }
 @media screen and (min-width: 768px) {
   .section .section-title {
@@ -343,7 +350,6 @@ h6 {
 }
 @media screen and (min-width: 1200px) {
   .section .section-title {
-    margin-bottom: 60px;
     font-size: 26px;
   }
 }
@@ -389,7 +395,7 @@ h6 {
   transition: background cubic-bezier(0.4, 0, 0.2, 1) 250ms, box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .btn-primary:hover, .btn-primary:focus {
-  background: #b80000;
+  background: #8d0101;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -401,7 +407,7 @@ h6 {
   transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .tel-link:hover, .tel-link:focus {
-  color: #b80000;
+  color: #8d0101;
 }
 
 .social-list {
@@ -423,7 +429,7 @@ h6 {
   fill: currentColor;
 }
 .social-list .social-item:hover, .social-list .social-item:focus {
-  background: #b80000;
+  background: #8d0101;
   color: #3e3e3e;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -480,7 +486,7 @@ h6 {
 }
 .header .header-nav .header-menu .item .header-menu-link:hover {
   transform: rotateX(360deg);
-  color: red;
+  color: #8d0101;
   background: #cccfcc;
 }
 
@@ -578,16 +584,16 @@ h6 {
 }
 
 .partner-list {
-  width: 100%;
   display: flex;
-  margin: -40px;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
 }
 .partner-list .partner-item {
-  flex-basis: calc((100% - 120px) / 6);
+  display: block;
   height: 150px;
-  padding: 20px;
-  margin: 20px;
   border: 1px solid white;
+  flex-basis: calc((100% - 40px) / 3);
 }
 
 .support {

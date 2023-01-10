@@ -1,12 +1,13 @@
 .partner-list {
-  width: 100%;
   display: flex;
-  margin: -40px;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
   .partner-item {
-    flex-basis: calc((100% - 120px) / 6);
+    display: block;
     height: 150px;
-    padding: 20px;
-    margin: 20px;
     border: 1px solid white;
+    flex-basis: calc((100% - 40px) / 3);
   }
 }
+

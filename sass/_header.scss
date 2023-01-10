@@ -46,7 +46,7 @@
             transform $animation-timing 3s;
           &:hover {
             transform: rotateX(360deg);
-            color: red;
+            color: $accent-color;
             background: $background-color;
           }
         }
