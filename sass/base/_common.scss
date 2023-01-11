@@ -20,6 +20,12 @@ body {
   }
 }
 
+body.lock {
+  @media screen and (max-width: 1199px) {
+    overflow: hidden;
+  }
+}
+
 *,
 *::before,
 *::after {

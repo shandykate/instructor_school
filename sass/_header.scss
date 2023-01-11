@@ -1,69 +1,129 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 10;
   width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  .header-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-text-color;
+  z-index: 3;
+}
+
+.header-body {
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 0 20px;
-  background-color: $main-color;
-  @media screen and (min-width: 768px) {
-    padding: 0 40px;
-  }
-  @media screen and (min-width: 1200px) {
-    padding: 0 60px;
-  }
-  // .header-thumb {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: flex-start;
-  //   margin-right: 20px;
+  height: 50px;
+  align-items: center;
   .header-logo {
-    width: 80px;
-    height: 80px;
-    background-image: url(./../img/main-logo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 10px 20px 10px 0;
-    transition: transform 1s ease-in-out;
-    &:hover {
-      transform: rotateX(360deg);
-    
-    // }
-    // .header-name {
-    //   display: none;
-    //   font-family: 'Philosopher', sans-serif;
-    //   font-size: 28px;
-    //   font-weight: 700;
-    //   text-transform: uppercase;
-    //   color: $heading-color;
-    // }
+    position: relative;
+    z-index: 5;
+    flex: 0 0 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    img {
+      max-width: 100%;
+    }
   }
-  .header-nav {
-    .header-menu {
-      display: flex;
-      color: $background-color;
-      .item {
-        .header-menu-link {
-          display: inline-flex;
-          align-items: center;
-          padding: 0 20px;
-          height: 100px;
-          text-transform: uppercase;
-          color: $background-color;
-          transition: background $animation-timing 250ms, color $animation-timing 250ms,
-            transform $animation-timing 3s;
-          &:hover {
-            transform: rotateX(360deg);
-            color: $accent-color;
-            background: $background-color;
-          }
+  .header-burger {
+    position: relative;
+    z-index: 5;
+    width: 30px;
+    height: 20px;
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+    span {
+      position: absolute;
+      background-color: $heading-color;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 9px;
+      transition: all $animation-timing 250ms;
+    }
+  }
+  .header-burger::before,
+  .header-burger::after {
+    content: '';
+    position: absolute;
+    background-color: $heading-color;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all $animation-timing 250ms;
+  }
+  .header-burger::before {
+    top: 0;
+  }
+  .header-burger::after {
+    bottom: 0;
+  }
+
+  .header-burger.active {
+    span {
+      transform: scale(0);
+    }
+  }
+
+  .header-burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header-burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header-menu {
+    @media screen and (max-width: 1199px) {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 70px 10px 10px 10px ;
+    background-color: $heading-color;
+    transition: all $animation-timing 250ms;
+    }
+  }
+
+  .header-menu.active {
+    @media screen and (max-width: 1199px) {
+    top: 0;
+    }
+  }
+  .header-list {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    @media screen and (max-width: 1199px) {
+    display: block;
+    }
+    .header-item {
+      @media screen and (max-width: 1199px) {
+        font-size: 30px;
+        margin: 0 0 20px 0;
         }
+      margin: 0 0 0 20px;
+      
+      .header-link {
+        color: $background-color;
       }
     }
   }
