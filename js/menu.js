@@ -5,5 +5,6 @@ $('body').toggleClass('lock');
 });
 $('.header-link').click(function(event){
     $('.header-burger, .header-menu').removeClass('active');
+    $('body').removeClass('lock');
 });
 });
