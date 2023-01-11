@@ -284,7 +284,7 @@ body {
     line-height: 28px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   html,
 body {
     font-size: 18px;
@@ -344,6 +344,7 @@ h6 {
   display: block;
   margin-bottom: 20px;
   font-size: 18px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   color: #c00000;
@@ -352,11 +353,13 @@ h6 {
   .section .section-title {
     margin-bottom: 40px;
     font-size: 22px;
+    line-height: 28px;
   }
 }
 @media screen and (min-width: 1200px) {
   .section .section-title {
     font-size: 26px;
+    line-height: 32px;
   }
 }
 
@@ -366,12 +369,10 @@ h6 {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   width: 100%;
+  max-width: 1400px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -451,7 +452,7 @@ h6 {
 }
 .header .header-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -464,15 +465,28 @@ h6 {
   width: 100%;
   height: 100%;
   background-color: #3e3e3e;
+  border-bottom: 1px solid #cccfcc;
   z-index: 3;
 }
 
 .header-body {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  height: 50px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  padding: 5px 0;
+}
+@media screen and (min-width: 768px) {
+  .header-body {
+    height: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-body {
+    height: 100px;
+  }
 }
 .header-body .header-logo {
   position: relative;
@@ -481,6 +495,16 @@ h6 {
   border-radius: 50%;
   overflow: hidden;
   display: block;
+}
+@media screen and (min-width: 768px) {
+  .header-body .header-logo {
+    flex: 0 0 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-body .header-logo {
+    flex: 0 0 80px;
+  }
 }
 .header-body .header-logo img {
   max-width: 100%;
