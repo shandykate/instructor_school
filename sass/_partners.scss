@@ -1,23 +1,19 @@
+.partners.section {
+  background-color: white;
+}
+
 .partner-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
-  @media screen and (min-width: 768px) {
-    gap: 40px;
-  }
   .partner-item {
-    display: block;
-    height: 150px;
-    border: 1px solid $primary-text-color;
-    flex-basis: calc((100% - 40px) / 3);
-    transition: all $animation-timing 250ms;
-    &:hover, &:focus {
-      border:1px solid $accent-color;
-      box-shadow: $box-shadow;
-    }
-    @media screen and (min-width: 768px) {
-      flex-basis: calc((100% - 80px) / 3);
+    width: 100px;
+    .partners-img {
+      display: block;
+      max-width: 100px
+      margin: 0 auto;
     }
   }
 }

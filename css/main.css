@@ -337,7 +337,7 @@ h6 {
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: #2d68ab;
 }
 @media screen and (min-width: 768px) {
   .section .section-title {
@@ -349,6 +349,9 @@ h6 {
 .coloured {
   background-color: #5c5c5c;
   color: #cccfcc;
+}
+.coloured .section-title {
+  color: white;
 }
 
 .container {
@@ -712,32 +715,25 @@ h6 {
   margin-bottom: 10px;
 }
 
+.partners.section {
+  background-color: white;
+}
+
 .partner-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
-  .partner-list {
-    gap: 40px;
-  }
-}
 .partner-list .partner-item {
+  width: 100px;
+}
+.partner-list .partner-item .partners-img {
   display: block;
-  height: 150px;
-  border: 1px solid #252525;
-  flex-basis: calc((100% - 40px) / 3);
-  transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-}
-.partner-list .partner-item:hover, .partner-list .partner-item:focus {
-  border: 1px solid #124074;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-}
-@media screen and (min-width: 768px) {
-  .partner-list .partner-item {
-    flex-basis: calc((100% - 80px) / 3);
-  }
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
 }
 
 .support {
