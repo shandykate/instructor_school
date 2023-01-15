@@ -4,6 +4,9 @@
   top: 0;
   left: 0;
   z-index: 50;
+  @media screen and (min-width: 1200px) {
+    position: relative;
+  }
   .header-container {
     width: 100%;
     max-width: 1400px;
@@ -17,30 +20,12 @@
     }
   }
 }
-.header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $primary-text-color;
-  border-bottom: 1px solid $background-color;
-  z-index: 3;
-}
 .header-body {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 50px;
-  @media screen and (min-width: 768px) {
-    height: 70px;
-  }
-  @media screen and (min-width: 1200px) {
-    height: 100px;
-  }
   .header-thumb {
     position: relative;
     z-index: 5;
@@ -49,16 +34,11 @@
     font-size: 22px;
     font-weight: 700;
     .header-logo {
-      flex: 0 0 40px;
-      border-radius: 50%;
-      overflow: hidden;
       display: block;
-      margin-right: 20px;
-      @media screen and (min-width: 768px) {
-        flex: 0 0 50px;
-      }
+      width: 80px;
       @media screen and (min-width: 1200px) {
-        flex: 0 0 80px;
+        width: 100px;
+        margin-right: 20px;
       }
       img {
         max-width: 100%;
@@ -69,10 +49,6 @@
       text-transform: uppercase;
       color: $heading-color;
       white-space: nowrap;
-      @media screen and (min-width: 768px) {
-        display: block;
-        flex: 0 0 60px;
-      }
       @media screen and (min-width: 1200px) {
         flex: 0 0 80px;
         font-size: 24px;
@@ -94,9 +70,9 @@
       position: absolute;
       background-color: $heading-color;
       width: 100%;
-      height: 2px;
+      height: 4px;
       left: 0;
-      top: 9px;
+      top: 8px;
       transition: all $animation-timing 250ms;
     }
   }
@@ -106,7 +82,7 @@
     position: absolute;
     background-color: $heading-color;
     width: 100%;
-    height: 2px;
+    height: 4px;
     left: 0;
     transition: all $animation-timing 250ms;
   }
@@ -125,27 +101,27 @@
 
   .header-burger.active:before {
     transform: rotate(45deg);
-    top: 9px;
+    top: 8px;
   }
   .header-burger.active:after {
     transform: rotate(-45deg);
-    bottom: 9px;
+    bottom: 8px;
   }
 
   .header-menu {
     @media screen and (max-width: 1199px) {
       position: fixed;
       top: -100%;
-      left: 0;
-      width: 100%;
+      right: 0;
+      width: 50%;
       height: 100%;
       overflow: auto;
       padding: 70px 20px 20px 20px;
       text-align: right;
-      background-color: $heading-color;
+      background-color: $background-color;
       transition: all $animation-timing 250ms;
       @media screen and (min-width: 768px) {
-        padding: 90px 40px 40px 40px;
+        padding: 100px 40px 40px 40px;
       }
     }
   }
@@ -170,7 +146,12 @@
       white-space: nowrap;
 
       .header-link {
-        color: $background-color;
+        color: $primary-text-color;
+        transition: all $animation-timing 250ms;
+        &:hover, &:focus {
+          text-shadow: $box-shadow;
+          color: $accent-color;
+        }
       }
     }
     .header-item:first-child {

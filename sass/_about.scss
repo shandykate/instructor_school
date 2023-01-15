@@ -1,5 +1,5 @@
 .about-list {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -9,50 +9,29 @@
     align-items: center;
     width: 100%;
     padding: 20px;
-    border-top: 1px solid $primary-text-color;
-    border-right: 1px solid $primary-text-color;
-    border-left: 1px solid $primary-text-color;
-    // border-right: 1px solid $primary-text-color;
-    @media screen and (min-width: 768px) {
-      width: 50%;
-      padding: 40px;
-      border-top: 1px solid $primary-text-color;
-    border-bottom: 1px solid $primary-text-color;
-    border-left: 1px solid $primary-text-color;
-    border-right: 0;
-    }
+    border: 1px solid $primary-text-color;
     .item-name {
       display: block;
       text-align: center;
       text-transform: uppercase;
       margin-bottom: 20px;
-      @media screen and (min-width: 768px) {
-        margin-bottom: 40px;
-      }
-      @media screen and (min-width: 1200px) {
-        margin-bottom: 60px;
-      }
     }
   }
-  .about-item:last-child{
-    border-bottom: 1px solid $primary-text-color;
+  .about-item:not(:last-child){
+    margin-bottom: 20px;
     @media screen and (min-width: 768px) {
-    border-right: 1px solid $primary-text-color;
-    }
+      margin-bottom: 0;
+      margin-right: 20px;
+      }
   }
 }
     .princips {
-      .princips-name {
+      text-align: center;
+      .princip-name {
       display: block;
       text-align: center;
       text-transform: uppercase;
       margin-bottom: 20px;
-      @media screen and (min-width: 768px) {
-        margin-bottom: 40px;
-      }
-      @media screen and (min-width: 1200px) {
-        margin-bottom: 60px;
-      }
       }
         .princip-item:not(:last-child) {
           margin-bottom: 20px;

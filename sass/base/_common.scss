@@ -60,9 +60,6 @@ h6 {
   @media screen and (min-width: 768px) {
     padding: 40px 0;
   }
-  @media screen and (min-width: 1200px) {
-    padding: 60px 0;
-  }
   .section-title {
     display: block;
     margin-bottom: 20px;
@@ -72,7 +69,6 @@ h6 {
     text-transform: uppercase;
     color: $heading-color;
     @media screen and (min-width: 768px) {
-      margin-bottom: 40px;
       font-size: 22px;
     line-height: 28px;
     }
@@ -84,7 +80,7 @@ h6 {
 }
 
 .coloured {
-  background-color: $primary-text-color;
+  background-color: $main-color;
   color: $background-color;
 }
 
@@ -95,9 +91,6 @@ h6 {
   margin: 0 auto;
   @media screen and (min-width: 768px) {
     padding: 0 40px;
-  }
-  @media screen and (min-width: 1200px) {
-    padding: 0 60px;
   }
 }
 
@@ -121,7 +114,6 @@ h6 {
   &:focus {
     background: $accent-color;
     box-shadow: $box-shadow;
-    color: $primary-text-color;
   }
 }
 
@@ -145,7 +137,7 @@ h6 {
     align-items: center;
     width: 60px;
     height: 60px;
-    background: red;
+    background: $accent-color;
     color: $background-color;
     transition: all $animation-timing 250ms;
     .social-icon {
