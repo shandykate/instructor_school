@@ -1,6 +1,22 @@
-.contacts {
-    .container {
-        display: flex;
-        flex-direction: column;
+
+.contacts-list {
+    margin: 0 auto ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .contacts-item {
+        display: inline-block;
+        margin: 0 auto;
+      .contacts-link {
+        padding: 10px 0;
+        font-size: 30px;
+        color: #cccfcc;
+        transition: color $animation-timing 250ms;
+        &:hover,
+        &:focus {
+          color: $accent-color;
+        }
+      }
     }
-}
+  }

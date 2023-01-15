@@ -113,18 +113,6 @@ h6 {
   }
 }
 
-.tel-link {
-  display: inline-flex;
-  margin: 0 auto;
-  font-size: 30px;
-  color: #cccfcc;
-  transition: color $animation-timing 250ms;
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-}
-
 .social-list {
   margin: 0 auto 20px auto;
   .social-item {
@@ -150,3 +138,4 @@ h6 {
     }
   }
 }
+
