@@ -4,10 +4,8 @@
   flex-direction: column;
   gap: 20px;
   .classes-item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     text-align: center;
+    width: 100%;
     .classes-name {
       text-transform: uppercase;
       margin-bottom: 20px;
@@ -18,11 +16,14 @@
         display: block;
         padding: 10px 0;
         color: $background-color;
-        background-color: $heading-color;
+        background-color: $accent-color;
         border: 1px solid $background-color;
         transition: all $animation-timing 250ms;
         &:hover, &:focus {
-          background-color: $accent-color;
+          color: $primary-text-color;
+          background-color: $accent-color-secondary;
+          border: 1px solid $primary-text-color;
+          text-shadow: $box-shadow;
         }
       }
       .course-item:not(:last-child){
