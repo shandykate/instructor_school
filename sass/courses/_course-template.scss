@@ -1,0 +1,38 @@
+.section.course {
+    background-color: $heading-color;
+    padding-top: 70px;
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+      }
+      @media screen and (min-width: 1200px) {
+        padding-top: 130px;
+      }
+    }
+    .course-wrapper {
+        @media screen and (min-width: 1200px) {
+            display: flex;
+          } 
+    }
+      .course-title {
+        margin-left: 100px;
+        color: $accent-color;
+        text-align: end;
+        margin-bottom: 20px;
+        @media screen and (min-width: 768px) {
+            margin-left: 150px;
+          }
+          @media screen and (min-width: 1200px) {
+            margin-left: 200px;
+          }
+      }
+
+.course-img {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+        width: 50%;
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+}

@@ -8,6 +8,7 @@
   @media screen and (min-width: 1200px) {
     position: relative;
     margin: 0 auto;
+    height: 0;
     
   }
   .header-container {
@@ -31,6 +32,8 @@ box-shadow: $box-shadow;
   height: 70px;
 }
 @media screen and (min-width: 1200px) {
+  border-right: 1px solid $primary-text-color;
+  border-left: 1px solid $primary-text-color;
   height: 90px;
 }
 }
