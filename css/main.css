@@ -373,14 +373,15 @@ h6 {
   margin: 0 auto;
   padding: 8px 15px;
   background: #0150aa;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #cccfcc;
+  color: #cccfcc;
   font-weight: 700;
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .btn-primary:hover, .btn-primary:focus {
-  color: #0150aa;
-  background: white;
+  color: #252525;
+  background: #a68200;
+  border: 1px solid #252525;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -429,7 +430,7 @@ h6 {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   max-width: 1400px;
   top: 0;
@@ -464,7 +465,7 @@ h6 {
 
 .header-logo {
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   display: block;
   width: 100px;
@@ -484,8 +485,8 @@ h6 {
 }
 
 .header-burger {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 20px;
   top: 20px;
   z-index: 5;
   width: 30px;
@@ -497,6 +498,7 @@ h6 {
 @media screen and (min-width: 768px) {
   .header-burger {
     top: 40px;
+    right: 40px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -598,7 +600,7 @@ h6 {
   display: block;
   margin-left: auto;
   width: 150px;
-  padding: 8px 12px;
+  padding: 12px;
   text-align: right;
   font-weight: 700;
   color: #cccfcc;
@@ -671,6 +673,10 @@ h6 {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+.about-list .about-item ul {
+  padding-left: 20px;
+  list-style: square;
+}
 .about-list .about-item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -681,16 +687,17 @@ h6 {
   }
 }
 
-.princips {
-  text-align: center;
-}
 .princips .princip-name {
   display: block;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.princips .princip-item:not(:last-child) {
+.princips .princip-list {
+  padding-left: 20px;
+  list-style: square;
+}
+.princips .princip-list .princip-item:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -711,22 +718,11 @@ h6 {
 .classes-list .classes-item .course-list {
   margin-bottom: 20px;
 }
-.classes-list .classes-item .course-list .course-link {
-  display: block;
-  padding: 10px 0;
-  color: #cccfcc;
-  background-color: #0150aa;
-  border: 1px solid #cccfcc;
-  transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-}
-.classes-list .classes-item .course-list .course-link:hover, .classes-list .classes-item .course-list .course-link:focus {
-  color: #252525;
-  background-color: #a68200;
-  border: 1px solid #252525;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-}
 .classes-list .classes-item .course-list .course-item:not(:last-child) {
   margin-bottom: 10px;
+}
+.classes-list .classes-item .course-list .btn-primary {
+  width: 100%;
 }
 
 .partners.section {
@@ -754,6 +750,9 @@ h6 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+}
+.support .section-title {
+  color: white;
 }
 
 .footer {

@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   max-width: 1400px;
   top: 0;
@@ -29,7 +29,7 @@
 }
 .header-logo {
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   display: block;
   width: 100px;
@@ -44,8 +44,8 @@
   }
 }
 .header-burger {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 20px;
   top: 20px;
   z-index: 5;
   width: 30px;
@@ -56,6 +56,7 @@
   }
   @media screen and (min-width: 768px) {
     top: 40px;
+    right: 40px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -146,7 +147,7 @@
       display: block;
       margin-left: auto;
       width: 150px;
-      padding: 8px 12px;
+      padding: 12px;
       text-align: right;
       font-weight:700;
       color: $background-color;

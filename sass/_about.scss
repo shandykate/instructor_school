@@ -16,24 +16,31 @@
       text-transform: uppercase;
       margin-bottom: 20px;
     }
+    ul {
+      padding-left: 20px;
+      list-style: square;
+    }
   }
-  .about-item:not(:last-child){
+  .about-item:not(:last-child) {
     margin-bottom: 20px;
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
       margin-right: 20px;
-      }
+    }
   }
 }
-    .princips {
-      text-align: center;
-      .princip-name {
-      display: block;
-      text-align: center;
-      text-transform: uppercase;
+.princips {
+  .princip-name {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .princip-list {
+    padding-left: 20px;
+    list-style: square;
+    .princip-item:not(:last-child) {
       margin-bottom: 20px;
-      }
-        .princip-item:not(:last-child) {
-          margin-bottom: 20px;
-        }
-      }
+    }
+  }
+}
