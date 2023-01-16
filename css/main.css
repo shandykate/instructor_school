@@ -464,16 +464,11 @@ h6 {
   background-color: #cccfcc;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
-@media screen and (min-width: 768px) {
-  .header::before {
-    height: 70px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .header::before {
     border-right: 1px solid #252525;
     border-left: 1px solid #252525;
-    height: 90px;
+    height: 70px;
   }
 }
 
@@ -489,19 +484,14 @@ h6 {
 .header-logo {
   position: absolute;
   z-index: 3;
-  top: 5px;
+  top: 2px;
   left: 0;
   display: block;
-  width: 100px;
-}
-@media screen and (min-width: 768px) {
-  .header-logo {
-    width: 150px;
-  }
+  width: 80px;
 }
 @media screen and (min-width: 1200px) {
   .header-logo {
-    width: 200px;
+    width: 120px;
   }
 }
 .header-logo img {
@@ -518,12 +508,6 @@ h6 {
 }
 .header-burger:hover, .header-burger:focus {
   cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .header-burger {
-    top: 25px;
-    right: 40px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .header-burger {
@@ -587,17 +571,11 @@ h6 {
     transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   }
 }
-@media screen and (max-width: 1199px) and (min-width: 768px) {
-  .header-menu {
-    width: 50%;
-    padding: 100px 40px 40px 40px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .header-menu {
     width: 100%;
     display: block;
-    padding-top: 45px;
+    padding-top: 30px;
   }
 }
 
@@ -792,16 +770,12 @@ h6 {
 
 .section.course {
   background-color: white;
+  padding-top: 50px;
   padding-top: 70px;
-}
-@media screen and (min-width: 768px) {
-  .section.course {
-    padding-top: 100px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .section.course {
-    padding-top: 130px;
+    padding-top: 100px;
   }
 }
 
@@ -812,19 +786,13 @@ h6 {
 }
 
 .course-title {
-  margin-left: 100px;
   color: #0150aa;
-  text-align: end;
+  text-align: center;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .course-title {
-    margin-left: 150px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .course-title {
-    margin-left: 200px;
+    margin-top: 10px;
   }
 }
 

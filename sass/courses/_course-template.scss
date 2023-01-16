@@ -1,11 +1,9 @@
 .section.course {
     background-color: $heading-color;
-    padding-top: 70px;
-    @media screen and (min-width: 768px) {
-        padding-top: 100px;
-      }
+    padding-top: 50px;
+        padding-top: 70px;
       @media screen and (min-width: 1200px) {
-        padding-top: 130px;
+        padding-top: 100px;
       }
     }
     .course-wrapper {
@@ -14,16 +12,12 @@
           } 
     }
       .course-title {
-        margin-left: 100px;
         color: $accent-color;
-        text-align: end;
+        text-align: center;
         margin-bottom: 20px;
-        @media screen and (min-width: 768px) {
-            margin-left: 150px;
-          }
-          @media screen and (min-width: 1200px) {
-            margin-left: 200px;
-          }
+        @media screen and (max-width: 767px) {
+        margin-top: 10px;
+        }
       }
 
 .course-img {
