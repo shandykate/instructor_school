@@ -642,15 +642,6 @@ h6 {
   }
 }
 
-.about.section {
-  padding-top: 420px;
-}
-@media screen and (min-width: 1200px) {
-  .about.section {
-    padding-top: 340px;
-  }
-}
-
 .about-list {
   margin-bottom: 20px;
 }
