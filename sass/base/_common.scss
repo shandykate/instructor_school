@@ -1,6 +1,7 @@
 /* ЗАГАЛЬНІ СТИЛІ */
 html,
 body {
+  height: 100%;
   box-sizing: border-box;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -19,6 +20,15 @@ body.lock {
   @media screen and (max-width: 1199px) {
     overflow: hidden;
   }
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 1 auto;
+  min-height: 100%;
 }
 *,
 *::before,
